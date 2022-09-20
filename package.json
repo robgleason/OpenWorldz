@@ -5,8 +5,8 @@
   "license": "MIT",
   "main": "start-desktop.js",
   "scripts": {
-    "start":"node start-web",
-    "start:electron":"electron .",
+    "start": "node start-web",
+    "start:electron": "electron .",
     "start:electron-forge": "electron-forge start",
     "pretty": "prettier src/**/*.{js,jsx,ts,tsx} --write"
   },
@@ -22,12 +22,12 @@
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.63",
     "concurrently": "7.1.0",
-    "electron":"18.0.3",
+    "electron": "18.0.3",
     "express": "4.17.3",
     "gl-matrix": "^3.4.3",
     "prettier": "2.6.2",
     "socket.io": "^4.4.1",
-    "sucrase": "3.21.0",
+    "sucrase": "^3.21.0",
     "typescript": "4.6.3"
   }
 }
