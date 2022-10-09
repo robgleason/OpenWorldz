@@ -37,12 +37,28 @@
 
         controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-        //Create the shape
+        
 
+        //Create the shape
+        const color2 = new THREE.Color( 0xff0000 );
         var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var cubeMaterials =
+        [
+            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
+            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/2.png'), side: THREE.DoubleSide}),
+            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/3.png'), side: THREE.DoubleSide}),
+            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/4.png'), side: THREE.DoubleSide}),
+            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/5.png'), side: THREE.DoubleSide}),
+            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/6.png'), side: THREE.DoubleSide})
+        ];
 
         //create a material, color or image texture
-        var material = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, wireframe: false});
+        var material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: false});
         var cube = new THREE.Mesh( geometry, material);
         scene.add( cube );
 
@@ -77,5 +93,7 @@
 
         GameLoop();
     </script>
+    hey
+    hey
 </body>
 </html>
