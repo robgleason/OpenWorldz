@@ -17,6 +17,8 @@
 <body>
     <script src="js/three.js"></script>
     <script src="js/OrbitControls.js"></script>
+    <!-- <script type="module" src="js/GLTFLoader.js"></script> -->
+    
 
     <script>
         var scene = new THREE.Scene();
@@ -36,40 +38,62 @@
         });
 
         controls = new THREE.OrbitControls(camera, renderer.domElement);
+        // import {GLTFLoader} from 'GLTFLoader.js';
+        // var loader = new THREE.GLTFLoader();
+        // // const gltfLoader = new GLTFLoader();
+        // const url = 'models/blenderwalk.glb';
+        //         gltfLoader.load(url, (gltf) => {
+        //             const root = gltf.scene;
+        //             scene.add(root);
+        //         });
 
+        // var loader = new THREE.ObjectLoader();
+
+        // loader.load
+        // (
+        //     'models/blenderwalk.glb',
+
+        //     function( object )
+        //     {
+        //         scene.add( object );
+        //     }
+        // );
         
-
+        // const loader = new THREE.TextureLoader();
         //Create the shape
         const color2 = new THREE.Color( 0xff0000 );
         var geometry = new THREE.BoxGeometry(1, 1, 1);
         var cubeMaterials =
         [
-            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
-            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
-            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
-            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
-            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
-            new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
-            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/2.png'), side: THREE.DoubleSide}),
-            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/3.png'), side: THREE.DoubleSide}),
-            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/4.png'), side: THREE.DoubleSide}),
-            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/5.png'), side: THREE.DoubleSide}),
-            // new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/6.png'), side: THREE.DoubleSide})
+            // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
+            // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
+            new THREE.MeshLambertMaterial({ map: new THREE.TextureLoader().load('img/1.png'), side: THREE.DoubleSide}),
+            new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('img/2.png'), side: THREE.DoubleSide}),
+            new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('img/3.png'), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/4.png'), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/5.png'), side: THREE.DoubleSide}),
+            new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('img/6.png'), side: THREE.DoubleSide})
         ];
 
         //create a material, color or image texture
         var material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: false});
-        var cube = new THREE.Mesh( geometry, material);
+        var cube = new THREE.Mesh( geometry, cubeMaterials);
         scene.add( cube );
 
         camera.position.z = 3;
 
+        var ambientLight = new THREE.AmbientLight(0xFFFFFF, 1.0);
+        scene.add(ambientLight);
         // game logic
 
         var update = function( )
         {
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.005;
+            // cube.rotation.x += 0.01;
+            // cube.rotation.y += 0.005;
 
             
 
