@@ -17,7 +17,7 @@
 <body>
     <script src="js/three.js"></script>
     <script src="js/OrbitControls.js"></script>
-    <!-- <script type="module" src="js/GLTFLoader.js"></script> -->
+    <script type="module" src="js/ObjectLoader.js"></script>
     
 
     <script>
@@ -38,31 +38,24 @@
         });
 
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-        // import {GLTFLoader} from 'GLTFLoader.js';
-        // var loader = new THREE.GLTFLoader();
-        // // const gltfLoader = new GLTFLoader();
-        // const url = 'models/blenderwalk.glb';
-        //         gltfLoader.load(url, (gltf) => {
-        //             const root = gltf.scene;
-        //             scene.add(root);
-        //         });
 
-        // var loader = new THREE.ObjectLoader();
 
-        // loader.load
-        // (
-        //     'models/blenderwalk.glb',
+        var loader = new THREE.ObjectLoader();
 
-        //     function( object )
-        //     {
-        //         scene.add( object );
-        //     }
-        // );
+        loader.load
+        (
+            'models/pixel',
+
+            function( object )
+            {
+                scene.add( object );
+            }
+        );
         
         // const loader = new THREE.TextureLoader();
         //Create the shape
         const color2 = new THREE.Color( 0xff0000 );
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var geometry = new THREE.BoxGeometry(1000, 1000, 1000);
         var cubeMaterials =
         [
             // new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }),
