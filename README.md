@@ -1,3 +1,10 @@
 # OpenWorldz
 
-https://www.youtube.com/watch?v=rR88qSgmPOw&list=PLRtjMdoYXLf6mvjCmrltvsD0j12ZQDMfE&index=4
+A Substatial amount of code was used from the threejs Documentation and Three.js Setup Guide Tutorial | Getting Started with React + Three.js by "Suboptimal Engineer"
+
+
+This game was created with React- To run the code do the following:
+
+git clone https://www.github.com/robgleason/OpenWorldz
+npm install
+npm run dev  
