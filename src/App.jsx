@@ -61,17 +61,17 @@ function App() {
 
     let mixer;
 
-       glftLoader.load('./assets/characters/Daisy.glb', (gltfScene) => {
-      loadedModel = gltfScene;
+      //  glftLoader.load('./assets/characters/Daisy.glb', (gltfScene) => {
+      // loadedModel = gltfScene;
      
       
-      gltfScene.scene.rotation.y = Math.PI / 8;
-      gltfScene.scene.position.y = -30;
-      gltfScene.scene.position.x = 0;
-      gltfScene.scene.position.z = 0;
-      gltfScene.scene.scale.set(20, 20, 20);
-      gltfScene.scene.rotation.y -= Math.PI / 6;
-      Worldz.scene.add(gltfScene.scene); 
+      // gltfScene.scene.rotation.y = Math.PI / 8;
+      // gltfScene.scene.position.y = -30;
+      // gltfScene.scene.position.x = 0;
+      // gltfScene.scene.position.z = 0;
+      // gltfScene.scene.scale.set(20, 20, 20);
+      // gltfScene.scene.rotation.y -= Math.PI / 6;
+      // Worldz.scene.add(gltfScene.scene); 
 
       // addEventListener("keydown", function(){
       //   if (event.keyCode === 83) { //s
@@ -88,45 +88,45 @@ function App() {
       //     gltfScene.scene.rotation.y += Math.PI / 4;}
       //   });
 
-      mixer = new THREE.AnimationMixer(gltfScene.scene);
-      const clips = gltfScene.animations;
-      var action = mixer.clipAction(clips[0]);
-      action.play();
+      // mixer = new THREE.AnimationMixer(gltfScene.scene);
+      // const clips = gltfScene.animations;
+      // var action = mixer.clipAction(clips[0]);
+      // action.play();
 
-      addEventListener("keydown", function(){
-        if (event.keyCode === 83) 
-        { //s
-          gltfScene.scene.position.z  -= 4;
-          mixer = new THREE.AnimationMixer(gltfScene.scene);
-          const clips = gltfScene.animations;
-          var action = mixer.clipAction(clips[1]);
-          action.play();
-        }
-        else if (event.keyCode === 87)
-        {
-          gltfScene.scene.position.z  += 4;
-          mixer = new THREE.AnimationMixer(gltfScene.scene);
-          const clips = gltfScene.animations;
-          var action = mixer.clipAction(clips[1]);
-          action.play();
-        }
+      // addEventListener("keydown", function(){
+      //   if (event.keyCode === 83) 
+      //   { //s
+      //     gltfScene.scene.position.z  -= 4;
+      //     mixer = new THREE.AnimationMixer(gltfScene.scene);
+      //     const clips = gltfScene.animations;
+      //     var action = mixer.clipAction(clips[1]);
+      //     action.play();
+      //   }
+      //   else if (event.keyCode === 87)
+      //   {
+      //     gltfScene.scene.position.z  += 4;
+      //     mixer = new THREE.AnimationMixer(gltfScene.scene);
+      //     const clips = gltfScene.animations;
+      //     var action = mixer.clipAction(clips[1]);
+      //     action.play();
+      //   }
 
-        });
+      //   });
 
-        addEventListener("keyup", function(){
-          if (event.keyCode === 83 || event.keyCode === 87) 
-          { //s
-            mixer = new THREE.AnimationMixer(gltfScene.scene);
-            const clips = gltfScene.animations;
-            var action = mixer.clipAction(clips[0]);
-            action.play();
-          }
+      //   addEventListener("keyup", function(){
+      //     if (event.keyCode === 83 || event.keyCode === 87) 
+      //     { //s
+      //       mixer = new THREE.AnimationMixer(gltfScene.scene);
+      //       const clips = gltfScene.animations;
+      //       var action = mixer.clipAction(clips[0]);
+      //       action.play();
+      //     }
   
-          });
+      //     });
 
       
       
-    });
+    // });
 
 
 
