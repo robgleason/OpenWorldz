@@ -60,7 +60,7 @@ function App() {
     const glftLoader = new GLTFLoader();
 
     let mixer;
-
+      // Add more movements 
       //  glftLoader.load('./assets/characters/Daisy.glb', (gltfScene) => {
       // loadedModel = gltfScene;
      
