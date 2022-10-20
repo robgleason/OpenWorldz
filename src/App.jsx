@@ -78,15 +78,15 @@ function App() {
       //     gltfScene.scene.position.z  -= 4;}
       //   });
 
-      // addEventListener("keydown", function(){
-      //   if (event.keyCode === 68) {  //d
-      //     gltfScene.scene.rotation.y -= Math.PI / 4;}
-      //   });
+       addEventListener("keydown", function(){
+         if (event.keyCode === 68) {  //d
+           gltfScene.scene.rotation.y -= Math.PI / 4;}
+         });
 
-      // addEventListener("keydown", function(){
-      //   if (event.keyCode === 65) {  //a
-      //     gltfScene.scene.rotation.y += Math.PI / 4;}
-      //   });
+       addEventListener("keydown", function(){
+         if (event.keyCode === 65) {  //a
+           gltfScene.scene.rotation.y += Math.PI / 4;}
+         });
 
       // mixer = new THREE.AnimationMixer(gltfScene.scene);
       // const clips = gltfScene.animations;
