@@ -34,7 +34,7 @@ function App() {
     const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
     Worldz.scene.add( light );
 
-    var geometry = new THREE.BoxGeometry(1000, 1000, 1000);
+    var geometry = new THREE.BoxGeometry(1000, 1000, 900);
     var cubeMaterials =
     [
         new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load(front), side: THREE.DoubleSide}),
